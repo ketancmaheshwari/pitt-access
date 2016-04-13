@@ -48,6 +48,7 @@ An independent, neutral and critical evaluation platform: quantitative and quali
 A platform to review software: applications, tools, libraries, compiler suites, standards.
 \item 
 Answers to questions such as:
+\begin{itemize}
 \item 
 I need an MD software for the Nvidia/CUDA platform, which one is the best?
 \item 
@@ -55,47 +56,24 @@ How well does the new combustion engine simulation software scales at 2048 CPUs?
 \item 
 Is it worth buying the latest compiler suite from PGI?
 \item 
-? and many more
+... and many more
+\end{itemize}
 \end{itemize}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Architecture(1)}
+\frametitle{Architecture}
 \begin{itemize}
 \itemsep1em
 \item 
-Layered
-\item 
-User Interface
+Layered architecture: UI, Test Framework, Evaluation Framework, Storage, DB
 \item
 Federated: users contribute, review and rate
 \item
-Testing framework
-\item
-correctness, scalability, compatibility, stability
-\item
-error reports
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Architecture(2)}
-\begin{itemize}
-\itemsep1em
-\item Evaluation frmework
-\item
-installation, configuration and maintenance
-\item
-compare and contrast
-\item
-Storage
+Record correctness, scalability, compatibility, stability
 \item
 Structured database for contents
-\item
-minimal app data storage
-\item
-disk based system for software
 \end{itemize}
 \end{frame}
 
@@ -104,13 +82,13 @@ disk based system for software
 \includegraphics[width=9cm]{workflow}
 \end{frame}
 
-
 \begin{frame}
-\frametitle{Challenges(1)}
+\frametitle{Challenges}
 \begin{itemize}
 \itemsep1em
 \item
  How do we:
+\begin{itemize}
  \item
  measure progress and productivity
  \item
@@ -118,12 +96,6 @@ disk based system for software
  \item
  What are potential roadblocks?
 \end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Challenges(2)}
-\begin{itemize}
-\itemsep1em
 \item 
 Strategic: potentially making important people upset
 \item
