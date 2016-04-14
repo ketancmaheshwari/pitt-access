@@ -14,7 +14,7 @@
 %\usetheme{Pittsburgh}
 
 \xdefinecolor{darkgreen}{rgb}{0.11,0.64,0.22}
-\title[Pitt Access]{{\large Pitt ACCESS\\ A Comprehensive and Critical Evaluation System for Software}}
+\title[Pitt Access]{{\large Pitt-ACCESS\\ A Comprehensive and Critical Evaluation System for Software}}
 \author[Pitt-Access]{{\scriptsize \textbf{Ketan and Barry}}}
 \date{}
 
@@ -28,74 +28,71 @@
 
 %Introduction
 \begin{frame}
-\frametitle{Motivation}
+\frametitle{Motivation: Why do we want to do this?}
 \begin{itemize}
 \itemsep1em
 \item 
-Frustration with science software: architectures, installation, runtime, maintenance, dependencies
+Frustration with science software: architectures, installation, runtime, maintenance, dependencies, platforms, libraries, tools, compilers
 \item 
-Diversity: platforms, libraries, tools, compilers
+Lack of an independent, neutral and critical evaluation platform: quantitative and qualitative
 \item 
-An independent, neutral and critical evaluation platform: quantitative and qualitative
+Benefit from a strong science software: applications, tools, techniques, technology
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{What is it all about?}
+\frametitle{Details: What Pitt-ACCESS is all about?}
 \begin{itemize}
 \itemsep1em
 \item 
-A platform to review software: applications, tools, libraries, compiler suites, standards.
+A platform to \textbf{critically} evaluate science software: applications, tools, libraries, compiler suites, standards and implementations.
 \item 
 Answers to questions such as:
 \begin{itemize}
 \item 
 I need an MD software for the Nvidia/CUDA platform, which one is the best?
 \item 
-How well does the new combustion engine simulation software scales at 2048 CPUs?
+Does the new combustion engine simulation software run over IBM BlueGene architectures?
 \item 
 Is it worth buying the latest compiler suite from PGI?
 \item 
-... and many more
+How well does \textit{VASP} scale for 750 ion problem space?
 \end{itemize}
 \end{itemize}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Architecture}
+\frametitle{Architecture: What are the components of this framework?}
 \begin{itemize}
-\itemsep1em
 \item 
-Layered architecture: User Interface (web portal), Test Framework, Evaluation Framework, Storage
-\item
-User accounts management system: community contributes, reviews and rates
-\item
-Catalog: tag and locate
-\item
-Structured database for contents
+Layered architecture: User Interface (web portal), Test Framework, Evaluation Framework, Database, Storage
+%\item
+%User accounts management system: community contributes, reviews and rates
+%\item
+%Catalog: tag and locate
+%\item
+%Structured database for contents
 \end{itemize}
+\includegraphics[width=9.6cm]{Architecture}
 \end{frame}
 
 \begin{frame}
-\frametitle{Execution: Pipeline}
-\includegraphics[width=9cm]{workflow}
+\frametitle{Execution: Typical workflow instance}
+\begin{itemize}
+\item
+Each stage may have multiple instances independent of each other.
+\end{itemize}
+\vspace{1em}
+\includegraphics[width=10cm]{workflow}
 \end{frame}
 
 \begin{frame}
-\frametitle{Challenges}
+\frametitle{Challenges: potential roadblocks}
 \begin{itemize}
 \itemsep1em
 \item
- How do we:
-\begin{itemize}
- \item
- measure progress and productivity
- \item
- sustain the effort? funding? infrastructure?
- \item
- What are potential roadblocks?
-\end{itemize}
+ Sustainability: How do we sustain the effort?
 \item 
 Strategic: potentially making important people upset
 \item
@@ -108,7 +105,7 @@ Unforeseen: this is a unique and first of its kind effort! (I know everyone says
 \end{frame}
 
 \begin{frame}
-\frametitle{Benefits}
+\frametitle{Benefits: What are the benefits?}
 \begin{itemize}
 \itemsep1em
 \item Strengthen SaM's (and Pitt's) software platforms
@@ -117,7 +114,7 @@ Save user's time and money
 \item
 Strong community outreach elements
 \item
-Deeper understanding of apps, better collaboration
+Deeper understanding, better collaboration
 \item 
 Better information of what the community is up to
 \item
@@ -128,8 +125,30 @@ Potentially discover new bugs
 \end{frame}
 
 \begin{frame}
-\frametitle{Example result}
-\includegraphics[width=10cm]{example1}
+\frametitle{Example results(1): comparative view of apps}
+\includegraphics[width=9cm]{example1}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example results(2): app vs compiler over a \textit{Dell cluster}}
+\begin{table}
+\begin{center}
+% use packages: array
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textit{comp/app} & \textbf{ipopt} & \textbf{VASP} & \textbf{rosetta} & \textbf{dock} & \textbf{icenine} \\
+\hline
+\textbf{Intel Suite} & \checkmark & \checkmark & x & \checkmark & \checkmark \\
+\hline
+\textbf{GCC} & x & \checkmark & x & x & \checkmark \\
+\hline
+\textbf{PGI} & x & \checkmark & \checkmark & \checkmark & x \\
+\hline
+\textbf{clang} & \checkmark & x & x & \checkmark & x \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 \end{frame}
 
 \begin{frame}
