@@ -41,6 +41,17 @@ Benefit from a strong scientific computing infrastructure: applications, tools, 
 \end{frame}
 
 \begin{frame}
+\frametitle{Some Concrete Examples}
+\begin{itemize}
+\itemsep1em
+\item Buildtime: GridPack Power Grid Simulation app from LLNL does not build on IBM BG/Q because it makes a fancy Boost library call. The call was not tested for BG/Q!
+\item Runtime: Icenine image reconstruction app from CMU segfaults with \texttt{-O2} compiler flag of GCC
+\item Install troubles: No makerule to statically build DISCUS: a diffusion scattering simulator
+\item Qualitative: Rosetta suite uses the SCONES build system: extremely tedious to customize builds.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
 \frametitle{Details: What Pitt-ACCESS is all about?}
 \begin{itemize}
 \itemsep1em
