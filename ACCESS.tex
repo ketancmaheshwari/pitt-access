@@ -28,15 +28,15 @@
 
 %Introduction
 \begin{frame}
-\frametitle{Motivation: Why do we want to do this?}
+\frametitle{Motivation: Why we want to build Pitt-ACCESS?}
 \begin{itemize}
 \itemsep1em
 \item 
 Frustration with science software: architectures, installation, runtime, maintenance, dependencies, platforms, libraries, tools, compilers
 \item 
-Lack of an independent, neutral and critical evaluation platform: quantitative and qualitative
+Lack of an independent, critical \textbf{evaluation} platform
 \item 
-Benefit from a strong scientific computing infrastructure: applications, tools, techniques, technology
+Need for a strong scientific computing infrastructure: applications, tools, techniques, technology
 \end{itemize}
 \end{frame}
 
@@ -44,10 +44,10 @@ Benefit from a strong scientific computing infrastructure: applications, tools, 
 \frametitle{Some Concrete Examples}
 \begin{itemize}
 \itemsep1em
-\item Buildtime: GridPack Power Grid Simulation app from LLNL does not build on IBM BG/Q because it makes a fancy Boost library call. The call was not tested for BG/Q!
-\item Runtime: Icenine image reconstruction app from CMU segfaults with \texttt{-O2} compiler flag of GCC
-\item Install troubles: No makerule to statically build DISCUS: a diffusion scattering simulator
-\item Qualitative: Rosetta suite uses the SCONES build system: extremely tedious to customize builds.
+\item App build troubles: GridPack Power Grid Simulator (from LLNL) does not build on IBM BG/Q because it makes a fancy Boost library call. The call was not tested for BG/Q!
+\item Runtime issues: Icenine image reconstruction app from CMU segfaults with \texttt{-O2} compiler flag of GCC
+\item Install troubles: No makerule to statically build DISCUS (a diffusion scattering simulator)
+\item Qualitative issues: Rosetta suite uses the SCONES build system: extremely tedious to configure.
 \end{itemize}
 \end{frame}
 
@@ -128,29 +128,30 @@ Discover new bugs and improve quality at code level
 
 \begin{frame}
 \frametitle{Example results(1): comparative view of apps}
-\includegraphics[width=9cm]{plot_view}
+\includegraphics[width=7cm]{plot_view}
 \end{frame}
 
 \begin{frame}
 \frametitle{(2): app vs compiler over a \textit{Dell cluster}}
-\begin{table}
-\begin{center}
-% use packages: array
-\begin{tabular}{|c|c|c|c|c|c|}
-\hline
-\textit{comp/app} & \textbf{ipopt} & \textbf{VASP} & \textbf{rosetta} & \textbf{dock} & \textbf{icenine} \\
-\hline
-\textbf{Intel Suite} & \checkmark & \checkmark & x & \checkmark & \checkmark \\
-\hline
-\textbf{GCC} & x & \checkmark & x & x & \checkmark \\
-\hline
-\textbf{PGI} & x & \checkmark & \checkmark & \checkmark & x \\
-\hline
-\textbf{clang} & \checkmark & x & x & \checkmark & x \\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
+\includegraphics[width=9cm]{table}
+%\begin{table}
+%\begin{center}
+%% use packages: array
+%\begin{tabular}{|c|c|c|c|c|c|}
+%\hline
+%\textit{comp/app} & \textbf{ipopt} & \textbf{VASP} & \textbf{rosetta} & \textbf{dock} & \textbf{icenine} \\
+%\hline
+%\textbf{Intel Suite} & \checkmark & \checkmark & x & \checkmark & \checkmark \\
+%\hline
+%\textbf{GCC} & x & \checkmark & x & x & \checkmark \\
+%\hline
+%\textbf{PGI} & x & \checkmark & \checkmark & \checkmark & x \\
+%\hline
+%\textbf{clang} & \checkmark & x & x & \checkmark & x \\
+%\hline
+%\end{tabular}
+%\end{center}
+%\end{table}
 \end{frame}
 
 \begin{frame}
@@ -168,17 +169,17 @@ A long term activity and effort!
 \end{itemize}
 \end{frame}
 
-\begin{frame}
-\frametitle{Plan: Timeline of activities }
-\begin{itemize}
-\itemsep1em
-\item Quarter 1-2: design, test, feedback--Perform the acquire, install, test, run, scale cycle
-\item Identify tools to build the platform: django/flask?, sqlite3?, json?, ...
-\item Quarter 3-4: Narrow down scope, short term goals, select target software, first webpage goes live
-\item Add more software, diversify science domain
-\item Identify and register patterns, eg. dominant IO patterns adapted by apps
-\end{itemize}
-\end{frame}
+%\begin{frame}
+%\frametitle{Plan: Timeline of activities }
+%\begin{itemize}
+%\itemsep1em
+%\item Quarter 1-2: design, test, feedback--Perform the acquire, install, test, run, scale cycle
+%\item Identify tools to build the platform: django/flask?, sqlite3?, json?, ...
+%\item Quarter 3-4: Narrow down scope, short term goals, select target software, first webpage goes live
+%\item Add more software, diversify science domain
+%\item Identify and register patterns, eg. dominant IO patterns adapted by apps
+%\end{itemize}
+%\end{frame}
 
 \begin{frame}
 \frametitle{Summary: IMDb of science software!}
