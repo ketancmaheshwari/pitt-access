@@ -28,7 +28,7 @@
 
 %Introduction
 \begin{frame}
-\frametitle{Motivation: Why we want to build Pitt-ACCESS?}
+\frametitle{Motivation: Why build Pitt-ACCESS?}
 \begin{itemize}
 \itemsep1em
 \item 
@@ -36,12 +36,12 @@ Frustration with science software: architectures, installation, runtime, mainten
 \item 
 Lack of an independent, critical \textbf{evaluation} platform
 \item 
-Need for a strong scientific computing infrastructure: applications, tools, techniques, technology
+Need a strong scientific software infrastructure: SaM in a unique position!
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Some Concrete Examples}
+\frametitle{Weak Software Infra: Concrete Examples}
 \begin{itemize}
 \itemsep1em
 \item App build troubles: GridPack Power Grid Simulator (from LLNL) does not build on IBM BG/Q because it makes a fancy Boost library call. The call was not tested for BG/Q!
@@ -52,7 +52,7 @@ Need for a strong scientific computing infrastructure: applications, tools, tech
 \end{frame}
 
 \begin{frame}
-\frametitle{Details: What Pitt-ACCESS is all about?}
+\frametitle{What Pitt-ACCESS is all about?}
 \begin{itemize}
 \itemsep1em
 \item 
@@ -61,13 +61,13 @@ Mission: Build a community driven platform to \textbf{critically} evaluate scien
 Answers to questions such as:
 \begin{itemize}
 \item 
-I need an MD software for the Nvidia/CUDA platform, which one to select?
+I need an MD software for CUDA, which one to select?
 \item 
-Does this Combustion Engine Simulator deploy over the new Intel architecture?
+Does the Accelerated Combustion Engine Simulator deploy over the new Intel Xeon Phi?
 \item
 How many file corruptions per year over a FreeNAS/ZFS based storage system?
 \item 
-Given 32G memory/node, how well does \textit{VASP} scale for 750 ion problem space?
+Given 32G mem/core, how well does \textit{VASP} scale for 750 ion problem space?
 \end{itemize}
 \end{itemize}
 
@@ -77,7 +77,7 @@ Given 32G memory/node, how well does \textit{VASP} scale for 750 ion problem spa
 \frametitle{Architecture: What are the key components?}
 \begin{itemize}
 \item 
-Layered architecture: User Interface (web portal), Test Framework, Evaluation Framework, Database, Storage
+Layered architecture: User Interface (web portal), Test \& Evaluation Framework, Database \& Storage Framework
 %\item
 %User accounts management system: community contributes, reviews and rates
 %\item
@@ -132,7 +132,7 @@ Discover new bugs and improve quality at code level
 \end{frame}
 
 \begin{frame}
-\frametitle{(2): app vs compiler over a \textit{Dell cluster}}
+\frametitle{(2): app vs compiler over \textit{SMP cluster}}
 \includegraphics[width=9cm]{table}
 %\begin{table}
 %\begin{center}
@@ -163,7 +163,7 @@ Promote multi-disciplinary research
 \item
 Enrich knowledge base
 \item
-Funding opportunities: Build partnerships with PIs/Groups
+Funding and collaboration opportunities: Build partnerships with PIs/Groups
 \item
 A long term activity and effort!
 \end{itemize}
