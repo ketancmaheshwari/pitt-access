@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# The recorder script
+
+set -ue
+
+# get the name of the system
+sysname=$()
+scratchdir=$()
+
+#figure the dbname
+randstr=
+dbname=$scratchdir/$randstr
+
+# run the script command and put the script file in designated db
+script
+
+# get the start time
+starttime=$()
+
+# record the name of the start dir
+startdir=$()
+
+# get the end time
+
+# get the name of the end dir
+
+# what is the size of start dir and end dir if they still exist
+
+# if the size is not too large copy them over to the scratch area of the system
+
