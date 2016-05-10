@@ -1,25 +1,26 @@
 #!/bin/bash
 
 # The recorder script
+# Runs in the background. How?
 
 set -ue
 
 # get the name of the system
-sysname=$()
-scratchdir=$()
+sysname=$(uname)
+scratchdir=$(pwd)
 
 #figure the dbname
-randstr=
-dbname=$scratchdir/$randstr
+randstr=$(date)
+#dbname=$scratchdir/$randstr
 
 # run the script command and put the script file in designated db
 script
 
 # get the start time
-starttime=$()
+#starttime=$()
 
 # record the name of the start dir
-startdir=$()
+#startdir=$()
 
 # get the end time
 
